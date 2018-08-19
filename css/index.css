@@ -1,0 +1,15 @@
+body{
+  background-image:url("/static/Shadow.jpg");
+}
+
+#Anushrut{
+  font-family: Lucida Console, Courier, monospace;
+  font-weight: lighter;
+  font-size: 50%;
+}
+
+#title{
+  font-family: fantasy;
+  font-weight: 500;
+  font-size: 200%;
+}
