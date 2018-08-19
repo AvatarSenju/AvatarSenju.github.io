@@ -1,3 +1,5 @@
+alert('working');
+
 var game=document.querySelector(".box");
 game.addEventListener('click', function() {
   this.style.background="pink";
