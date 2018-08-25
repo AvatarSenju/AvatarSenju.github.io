@@ -2,9 +2,9 @@ body{
   /* background-image:url("https://i.pinimg.com/originals/d7/93/24/d79324cdaff4652b0d18bc455ce3c92c.png"); */
     background-color: #798375;
     background-image: url("../static/kakashi.png");
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* background-position:0px 20px; */
