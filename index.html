@@ -20,6 +20,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contributions">Open Source</a></li>
+                <li><a href="#journey">Journey</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -36,8 +37,8 @@
             <h1 class="hero-title">Anushrut</h1>
             <p class="hero-subtitle">Software Engineer &amp; Open Source Contributor</p>
             <p class="hero-description">
-                Building reliable software, contributing to open source, and solving algorithmic challenges.
-                Passionate about systems programming, computer vision, and web development.
+                Contributing to the Rust compiler, building computer vision systems,
+                and shipping full-stack applications. From invoice parsing to autonomous robots.
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -69,36 +70,44 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a software engineer with a strong foundation in systems programming, web development,
-                        and competitive programming. My journey spans from contributing to major open source projects
-                        like <strong>Rust</strong> and <strong>FOSSASIA</strong> to building real-world applications
-                        and competing in hackathons like <strong>Smart India Hackathon</strong>.
+                        I'm a software engineer who has contributed to projects ranging from the
+                        <strong>Rust programming language</strong> (merged PR to rust-lang/rust) to building
+                        <strong>object tracking and face detection</strong> systems at LNMIIT's Phoenix lab.
+                        I've shipped production code across Python, C++, Rust, and JavaScript.
                     </p>
                     <p>
-                        I studied at <strong>LNMIIT</strong>, where I honed my skills in data structures, algorithms,
-                        and computer vision. I'm an <strong>Arctic Code Vault Contributor</strong> and hold multiple
-                        GitHub achievements including Pull Shark and Pair Extraordinaire.
+                        My open source journey started in <strong>2017</strong> — with early Hacktoberfest contributions,
+                        then progressing to substantial work: adding invoice parsing templates to <strong>invoice2data</strong>,
+                        contributing to <strong>FOSSASIA</strong> and <strong>EbookFoundation</strong>,
+                        building an <strong>autonomous RoboSoccer</strong> system, and ultimately landing a PR
+                        in the <strong>Rust compiler bootstrap</strong> toolchain.
                     </p>
                     <p>
-                        When I'm not coding, you'll find me exploring new technologies, mentoring peers,
-                        or tinkering with robotics projects.
+                        I'm an <strong>Arctic Code Vault Contributor</strong>, <strong>Pull Shark x3</strong>,
+                        and <strong>Pair Extraordinaire x3</strong>. I reached the <strong>SIH 2020 Finals</strong>
+                        as part of Team SAAHASi.
                     </p>
                 </div>
                 <div class="about-highlights">
                     <div class="highlight-card">
+                        <span class="highlight-icon">🦀</span>
+                        <h3>Rust Compiler Contributor</h3>
+                        <p>Merged PR #131117 to rust-lang/rust — improved bootstrap configure.py documentation</p>
+                    </div>
+                    <div class="highlight-card">
                         <span class="highlight-icon">🏆</span>
-                        <h3>SIH Finalist</h3>
-                        <p>Smart India Hackathon 2020 Finals — Team SAAHASi</p>
+                        <h3>SIH 2020 Finalist</h3>
+                        <p>Smart India Hackathon Finals — Team SAAHASi (IC465)</p>
                     </div>
                     <div class="highlight-card">
                         <span class="highlight-icon">🧊</span>
                         <h3>Arctic Code Vault</h3>
-                        <p>Code preserved for future generations in the Arctic</p>
+                        <p>Code preserved for 1,000 years in the GitHub Arctic Code Vault</p>
                     </div>
                     <div class="highlight-card">
-                        <span class="highlight-icon">🦀</span>
-                        <h3>Rust Contributor</h3>
-                        <p>Contributed to the Rust programming language</p>
+                        <span class="highlight-icon">📄</span>
+                        <h3>invoice2data</h3>
+                        <p>Added Flipkart invoice template to the invoice-x/invoice2data parser (merged PR #90)</p>
                     </div>
                 </div>
             </div>
@@ -215,7 +224,7 @@
                         </div>
                     </div>
                     <h3 class="project-title">RoboSoccer</h3>
-                    <p class="project-description">A robotics project implementing autonomous soccer-playing robots using Python and computer vision techniques.</p>
+                    <p class="project-description">Autonomous soccer-playing robots using Python and computer vision. Built motion planning and ball tracking with multiple merged PRs.</p>
                     <div class="project-tags">
                         <span>Python</span>
                         <span>Robotics</span>
@@ -233,7 +242,7 @@
                         </div>
                     </div>
                     <h3 class="project-title">Computer Vision</h3>
-                    <p class="project-description">Computer vision projects including image processing, object detection, and classification built with Python and OpenCV.</p>
+                    <p class="project-description">Object tracking, face detection, and image classification projects for LNMIIT Phoenix. Contributed improved project structure and additional tracking algorithms via upstream PRs.</p>
                     <div class="project-tags">
                         <span>Python</span>
                         <span>OpenCV</span>
@@ -268,39 +277,103 @@
             <div class="contributions-grid">
                 <div class="contribution-card">
                     <div class="contribution-org">
-                        <span class="contribution-badge">Contributor</span>
+                        <span class="contribution-badge">Merged PR</span>
                     </div>
-                    <h3>Rust Programming Language</h3>
-                    <p>Contributed to the Rust compiler and ecosystem — empowering everyone to build reliable and efficient software.</p>
-                    <a href="https://github.com/rust-lang/rust" target="_blank" rel="noopener noreferrer" class="contribution-link">rust-lang/rust →</a>
+                    <h3>rust-lang/rust</h3>
+                    <p>PR #131117 — Updated bootstrap configure.py helper docs to clarify enable/disable options. Merged by bors. Fixed issue #129146.</p>
+                    <a href="https://github.com/rust-lang/rust/pull/131117" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
                 </div>
                 <div class="contribution-card">
                     <div class="contribution-org">
-                        <span class="contribution-badge">Contributor</span>
+                        <span class="contribution-badge">Merged PR</span>
                     </div>
-                    <h3>FOSSASIA</h3>
-                    <p>Contributed to multiple FOSSASIA projects including Open Event Server, Badgeyay, and Codeheat.</p>
-                    <a href="https://github.com/fossasia" target="_blank" rel="noopener noreferrer" class="contribution-link">fossasia →</a>
+                    <h3>invoice-x/invoice2data</h3>
+                    <p>PR #90 — Added Flipkart invoice parsing template to the invoice2data extraction tool. Tested against real invoices.</p>
+                    <a href="https://github.com/invoice-x/invoice2data/pull/90" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
+                </div>
+                <div class="contribution-card">
+                    <div class="contribution-org">
+                        <span class="contribution-badge">Multiple PRs</span>
+                    </div>
+                    <h3>lnmiitPhoenix/Computer-Vision</h3>
+                    <p>5 merged PRs — Added object tracking, face detection, improved project structure, and updated working folders for the Phoenix CV lab.</p>
+                    <a href="https://github.com/lnmiitPhoenix/Computer-Vision" target="_blank" rel="noopener noreferrer" class="contribution-link">View Repo →</a>
                 </div>
                 <div class="contribution-card">
                     <div class="contribution-org">
                         <span class="contribution-badge">Team Member</span>
                     </div>
                     <h3>Team SAAHASi — SIH 2020</h3>
-                    <p>Smart India Hackathon 2020 Finals. Built an innovative solution as part of Team SAAHASi.</p>
+                    <p>Smart India Hackathon 2020 Finals (IC465). Built and deployed the team's solution for a national-level problem statement.</p>
                     <a href="https://github.com/arnabsinha99/IC465_SAAHASi" target="_blank" rel="noopener noreferrer" class="contribution-link">IC465_SAAHASi →</a>
+                </div>
+                <div class="contribution-card">
+                    <div class="contribution-org">
+                        <span class="contribution-badge">Merged PR</span>
+                    </div>
+                    <h3>mrhagrawal/competitive_programming_resources</h3>
+                    <p>PR #25 — Added C++ solutions and corrected README spelling during Hacktoberfest 2020.</p>
+                    <a href="https://github.com/mrhagrawal/competitive_programming_resources/pull/25" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
                 </div>
                 <div class="contribution-card">
                     <div class="contribution-org">
                         <span class="contribution-badge">Contributor</span>
                     </div>
-                    <h3>coala</h3>
-                    <p>Contributed to coala — a unified command-line interface for linting and fixing code across programming languages.</p>
-                    <a href="https://github.com/coala/coala" target="_blank" rel="noopener noreferrer" class="contribution-link">coala/coala →</a>
+                    <h3>EbookFoundation &amp; Microsoft</h3>
+                    <p>Submitted PRs to free-programming-books (adding algorithm textbook) and Microsoft/MS-DOS (Hindi README translation).</p>
+                    <a href="https://github.com/EbookFoundation/free-programming-books/pull/4915" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
                 </div>
             </div>
             <div class="github-graph">
                 <img src="https://ghchart.rshah.org/6366f1/AvatarSenju" alt="GitHub Contributions Graph" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="journey">
+        <div class="container">
+            <h2 class="section-title">Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
+                        <h3>Rust Compiler Contribution</h3>
+                        <p>Merged PR to rust-lang/rust — improved bootstrap toolchain documentation. Labeled T-bootstrap, merged by bors.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020</span>
+                        <h3>SIH Finals &amp; Hacktoberfest</h3>
+                        <p>Reached Smart India Hackathon 2020 Finals as Team SAAHASi. Active Hacktoberfest contributor — PRs to competitive programming resources and free-programming-books.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019–2020</span>
+                        <h3>Computer Vision &amp; Robotics</h3>
+                        <p>Built object tracking and face detection for Phoenix CV lab (5 merged PRs). Developed autonomous RoboSoccer with motion planning and ball tracking.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2018</span>
+                        <h3>Open Source Foundations</h3>
+                        <p>Contributed to invoice-x/invoice2data (Flipkart template), FOSSASIA projects, and Booth's bit-pair algorithm implementation. First substantial open source work.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2017</span>
+                        <h3>First Pull Request</h3>
+                        <p>Started open source journey with Hacktoberfest. First PRs to community repos — learning Git, collaboration, and code review workflows.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
