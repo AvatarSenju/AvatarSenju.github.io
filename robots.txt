@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://anushrut.in/sitemap.xml
