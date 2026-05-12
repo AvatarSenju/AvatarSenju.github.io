@@ -276,6 +276,7 @@ body {
 
 .section-alt {
     background: var(--bg-secondary);
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -488,6 +489,8 @@ body {
     border-radius: var(--radius);
     padding: 28px;
     transition: all var(--transition);
+    overflow: hidden;
+    min-width: 0;
 }
 
 .contribution-card:hover {
@@ -515,6 +518,8 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 8px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .contribution-card p {
