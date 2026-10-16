@@ -1,65 +1,54 @@
-// Navbar scroll effect
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-});
-
-// Mobile nav toggle
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const navLinkElements = navLinks.querySelectorAll('a');
+const sections = document.querySelectorAll('main section[id]');
+
+navbar.classList.add('enhanced');
+
+function closeNavigation() {
+    navLinks.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation');
+}
 
 navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    const isOpen = navLinks.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
 });
 
-// Close mobile nav on link click
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+navLinkElements.forEach(link => {
+    link.addEventListener('click', closeNavigation);
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe all cards and sections for animation
-document.querySelectorAll('.project-card, .contribution-card, .highlight-card, .skill-category, .contact-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeNavigation();
+        navToggle.focus();
+    }
 });
 
-// Smooth active nav link highlighting
-const sections = document.querySelectorAll('.section, .hero');
-const navLinkElements = document.querySelectorAll('.nav-links a');
+window.matchMedia('(max-width: 760px)').addEventListener('change', closeNavigation);
 
-window.addEventListener('scroll', () => {
+function updateNavigation() {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute('id');
+        if (window.scrollY >= section.offsetTop - 130) {
+            current = section.id;
         }
     });
 
     navLinkElements.forEach(link => {
-        link.style.color = '';
         if (link.getAttribute('href') === `#${current}`) {
-            link.style.color = 'var(--accent-light)';
+            link.setAttribute('aria-current', 'location');
+        } else {
+            link.removeAttribute('aria-current');
         }
     });
-});
+}
+
+window.addEventListener('scroll', updateNavigation, { passive: true });
+window.addEventListener('load', updateNavigation);
+updateNavigation();
