@@ -534,6 +534,14 @@ h2 {
     transform: translateY(-4px);
 }
 
+.project-card-wide {
+    grid-column: 1 / -1;
+}
+
+.project-card-wide p {
+    max-width: 70ch;
+}
+
 .card-number {
     color: var(--accent);
     font-family: var(--mono);
