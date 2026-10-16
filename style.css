@@ -44,7 +44,8 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+summary:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 6px;
 }
@@ -368,6 +369,36 @@ h1 > span {
 .system-footer {
     justify-content: flex-start;
     margin-top: 24px;
+}
+
+.under-the-hood {
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+}
+
+.under-the-hood summary {
+    width: fit-content;
+    padding-block: 8px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.under-the-hood p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.btn span {
+    display: inline-block;
+    transition: transform 180ms ease;
+}
+
+.btn:hover span,
+.btn:focus-visible span {
+    transform: translate(2px, -2px);
 }
 
 .floating-label {
