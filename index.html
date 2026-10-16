@@ -3,439 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anushrut | Software Engineer at AMD</title>
-    <meta name="description" content="Portfolio of Anushrut — Software Engineer at AMD. Networking, firmware, RTOS, CI/CD, and open source.">
+    <meta name="theme-color" content="#0b1120">
+    <meta name="description" content="Anushrut — Software Engineer at AMD. Systems programming, Linux drivers, networking firmware, GPU infrastructure, diagnostics, and automation.">
+    <title>Anushrut | Systems &amp; Networking Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
 <body>
-    <nav class="navbar" id="navbar">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#" class="nav-logo">anushrut<span class="accent">.</span>in</a>
-            <ul class="nav-links">
+            <a href="#hero" class="nav-logo" aria-label="Anushrut home">Anushrut<span>.</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contributions">Open Source</a></li>
+                <li><a href="#experience">Expertise</a></li>
+                <li><a href="#skills">Toolkit</a></li>
                 <li><a href="#journey">Journey</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Let's talk <span aria-hidden="true">↗</span></a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
 
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <p class="hero-greeting">Hi, I'm</p>
-            <h1 class="hero-title">Anushrut</h1>
-            <p class="hero-subtitle">Software Engineer at <strong>AMD</strong></p>
-            <p class="hero-description">
-                Building networking firmware, RTOS platforms, CI/CD infrastructure, and diagnostics tooling.
-                From DPU firmware and P4 data-plane programming to Rust compiler contributions.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="https://github.com/AvatarSenju" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    <main id="main">
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Software Engineer at AMD</p>
+                <h1>Hi, I'm Anushrut.<br><span>Building beneath<br>the surface.</span></h1>
+                <p class="hero-description">Firmware. Drivers. Networks. The systems that make everything else possible. I connect low-level engineering with reliable, observable infrastructure.</p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn btn-primary">Explore my work <span aria-hidden="true">↘</span></a>
+                    <a href="https://github.com/AvatarSenju" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="hero-stats" role="group" aria-label="GitHub contribution snapshot">
+                    <div class="stat"><span class="stat-number">1,093</span><span class="stat-label">Authored PRs</span></div>
+                    <div class="stat"><span class="stat-number">988</span><span class="stat-label">Merged PRs</span></div>
+                    <div class="stat"><span class="stat-number">2017</span><span class="stat-label">Contributing since</span></div>
+                </div>
+                <p class="stats-note">GitHub snapshot · October 2026 · Public &amp; private work, including release backports. Authored totals include open and closed PRs.</p>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">970+</span>
-                    <span class="stat-label">Professional PRs</span>
+            <div class="hero-visual" role="group" aria-label="Engineering focus: firmware, drivers, networking, and infrastructure">
+                <div class="system-card">
+                    <div class="system-header"><span class="terminal-dots" aria-hidden="true">● ● ●</span><span>engineer / systems</span></div>
+                    <div class="identity"><img src="https://avatars.githubusercontent.com/u/32019180?v=4" alt="Anushrut" width="72" height="72"><div><strong>Anushrut</strong><span>Software Engineer · AMD</span></div></div>
+                    <p class="code-label">// from silicon to software</p>
+                    <div class="stack-layer"><span>01</span><strong>Infrastructure &amp; automation</strong><small>Python · Ansible</small></div>
+                    <div class="stack-connector" aria-hidden="true">↕</div>
+                    <div class="stack-layer"><span>02</span><strong>Userspace &amp; control plane</strong><small>C++ · Go</small></div>
+                    <div class="stack-connector" aria-hidden="true">↕</div>
+                    <div class="stack-layer"><span>03</span><strong>Drivers &amp; firmware</strong><small>C · Linux · RTOS</small></div>
+                    <div class="system-footer"><span class="status-dot" aria-hidden="true"></span> Built for reliability.</div>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">816+</span>
-                    <span class="stat-label">Contributions (last year)</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">8+</span>
-                    <span class="stat-label">Years Coding</span>
-                </div>
+                <div class="floating-label" aria-hidden="true">&lt;/&gt; full-stack, down to the metal</div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <img src="https://avatars.githubusercontent.com/u/32019180?v=4" alt="Anushrut" class="hero-avatar" loading="eager">
-        </div>
-    </section>
+        </section>
 
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+        <section class="section" id="about">
+            <div class="section-heading"><p class="eyebrow">01 / About</p><h2>A systems mindset.<br>A practical approach.</h2></div>
+            <div class="about-layout">
                 <div class="about-text">
-                    <p>
-                        I'm a Software Engineer at <strong>AMD</strong>, working on networking firmware,
-                        embedded RTOS, CI/CD infrastructure, and hardware diagnostics tooling for
-                        next-generation DPU and SmartNIC platforms. I've authored <strong>970+ PRs</strong>
-                        professionally, spanning firmware bring-up, data-plane programming, and cluster-scale
-                        test automation.
-                    </p>
-                    <p>
-                        My work covers the full stack — from <strong>P4/P4+ data-plane pipelines</strong>
-                        and <strong>Zephyr RTOS</strong> firmware to <strong>Ansible-based infrastructure automation</strong>,
-                        <strong>Go-based end-to-end test frameworks</strong>, and <strong>Python diagnostics tools</strong>.
-                        I also maintain CI/CD systems, build packaging pipelines, and monitoring solutions.
-                    </p>
-                    <p>
-                        Outside work, I contribute to open source — merged a PR to the <strong>Rust compiler</strong>,
-                        built <strong>computer vision</strong> systems, and I'm an <strong>Arctic Code Vault Contributor</strong>,
-                        <strong>Pull Shark x3</strong>, and <strong>Pair Extraordinaire x3</strong>.
-                    </p>
+                    <p>I’m a Software Engineer at <strong>AMD</strong>, working across <strong>networking firmware, Linux device drivers, and userspace systems</strong>. I connect platform behavior with the tools engineers use to configure, validate, and troubleshoot it.</p>
+                    <p>My work spans programmable packet processing, embedded RTOS simulation, kernel-to-userspace APIs, and GPU networking infrastructure. I also build diagnostics, monitoring pipelines, and reproducible deployment and test workflows.</p>
+                    <p>The common thread is reliability: understand the failure, fix the underlying behavior, and make the regression test prove it.</p>
                 </div>
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <span class="highlight-icon">🔴</span>
-                        <h3>AMD — Software Engineer</h3>
-                        <p>DPU/SmartNIC firmware, networking data-plane, RTOS, CI/CD, and diagnostics tooling</p>
-                    </div>
-                    <div class="highlight-card">
-                        <span class="highlight-icon">🦀</span>
-                        <h3>Rust Compiler Contributor</h3>
-                        <p>Merged PR #131117 to rust-lang/rust — bootstrap toolchain docs</p>
-                    </div>
-                    <div class="highlight-card">
-                        <span class="highlight-icon">🏆</span>
-                        <h3>SIH 2020 Finalist</h3>
-                        <p>Smart India Hackathon Finals — Team SAAHASi</p>
-                    </div>
-                    <div class="highlight-card">
-                        <span class="highlight-icon">🧊</span>
-                        <h3>Arctic Code Vault</h3>
-                        <p>Code preserved for 1,000 years in the GitHub Arctic Code Vault</p>
-                    </div>
+                <div class="principles">
+                    <div><span aria-hidden="true">↳</span><h3>Follow the whole path</h3><p>From a firmware response to a driver interface to an operator’s command line.</p></div>
+                    <div><span aria-hidden="true">↳</span><h3>Make failures explainable</h3><p>Useful telemetry, clear error reporting, and diagnostics that lead somewhere.</p></div>
+                    <div><span aria-hidden="true">↳</span><h3>Validate real behavior</h3><p>Meaningful assertions, realistic mocks, and hardware-aware integration tests.</p></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section section-alt" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills &amp; Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Go</span>
-                        <span class="skill-tag">Rust</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">P4/P4+</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Frameworks &amp; Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Zephyr RTOS</span>
-                        <span class="skill-tag">Ansible</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">CMake</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Prometheus</span>
-                        <span class="skill-tag">gRPC/Protobuf</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">QEMU</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Domains</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Networking / DPU</span>
-                        <span class="skill-tag">Firmware &amp; RTOS</span>
-                        <span class="skill-tag">Data-Plane Programming</span>
-                        <span class="skill-tag">IPSec / Encryption</span>
-                        <span class="skill-tag">RDMA</span>
-                        <span class="skill-tag">Infrastructure Automation</span>
-                        <span class="skill-tag">Hardware Diagnostics</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">Systems Programming</span>
-                        <span class="skill-tag">Open Source</span>
-                    </div>
-                </div>
+            <div class="ai-workflow">
+                <div><p class="eyebrow">How I work</p><h3>AI alongside me.<br>Engineering ownership with me.</h3></div>
+                <div><p>Most of my development is now done <strong>with and alongside AI</strong>. I use it as a collaborator to explore code, develop implementations, and iterate on tests.</p><p>I own the design decisions, review the changes, and validate the behavior. AI is part of the workflow, not a substitute for understanding the system.</p></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section" id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+        <section class="section" id="experience">
+            <div class="section-heading"><p class="eyebrow">02 / Engineering expertise</p><h2>Different layers.<br>The same attention to detail.</h2><p>Experience across the systems stack, from implementation to validation and operations.</p></div>
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                        <div class="project-links">
-                            <a href="https://github.com/AvatarSenju/sih-heroku" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">SIH Heroku App</h3>
-                    <p class="project-description">Smart India Hackathon project deployed on Heroku. A full-stack Python application built for solving real-world problems.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>Heroku</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                        <div class="project-links">
-                            <a href="https://github.com/AvatarSenju/flask-blog" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Flask Blog</h3>
-                    <p class="project-description">A full-featured blog application built with Flask, featuring user authentication, post management, and a clean UI.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>Web</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                        <div class="project-links">
-                            <a href="https://github.com/AvatarSenju/Phoenix-Website" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Phoenix Website</h3>
-                    <p class="project-description">Official website for Phoenix — the student tech community. Built with modern CSS and responsive design.</p>
-                    <div class="project-tags">
-                        <span>CSS</span>
-                        <span>HTML</span>
-                        <span>JavaScript</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                        <div class="project-links">
-                            <a href="https://github.com/AvatarSenju/RoboSoccer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">RoboSoccer</h3>
-                    <p class="project-description">Autonomous soccer-playing robots using Python and computer vision. Built motion planning and ball tracking with multiple merged PRs.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Robotics</span>
-                        <span>CV</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                        <div class="project-links">
-                            <a href="https://github.com/lnmiitPhoenix/Computer-Vision" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Computer Vision</h3>
-                    <p class="project-description">Object tracking, face detection, and image classification projects for LNMIIT Phoenix. Contributed improved project structure and additional tracking algorithms via upstream PRs.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>OpenCV</span>
-                        <span>ML</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                        <div class="project-links">
-                            <a href="https://github.com/AvatarSenju/Competitive" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Competitive Programming</h3>
-                    <p class="project-description">Solutions to competitive programming problems from various online judges, written in C++ with optimized algorithms.</p>
-                    <div class="project-tags">
-                        <span>C++</span>
-                        <span>Algorithms</span>
-                        <span>DSA</span>
-                    </div>
-                </article>
+                <article class="project-card"><span class="card-number">01 / SYSTEMS</span><h3>Linux drivers &amp;<br>userspace integration</h3><p>Extend device configuration and telemetry across kernel interfaces, C libraries, and C++ command-line tools. Work with Netlink, asynchronous completion, API compatibility, caching, and device lifecycles.</p><div class="project-tags"><span>C / C++</span><span>Linux</span><span>Netlink</span></div></article>
+                <article class="project-card"><span class="card-number">02 / INFRASTRUCTURE</span><h3>GPU networking &amp;<br>platform automation</h3><p>Build configuration-driven workflows for compute nodes, GPUs, and switches. Automate discovery, driver deployment, configuration, verification, and teardown across hardware and simulated environments.</p><div class="project-tags"><span>Ansible</span><span>Python</span><span>Networking</span></div></article>
+                <article class="project-card"><span class="card-number">03 / EMBEDDED</span><h3>Firmware &amp;<br>RTOS simulation</h3><p>Develop host-based firmware simulation and integrate platform services with hardware models. Maintain build configuration, device-tree generation, packaging, and automated tests for embedded environments.</p><div class="project-tags"><span>Zephyr</span><span>CMake</span><span>QEMU</span></div></article>
+                <article class="project-card"><span class="card-number">04 / DATA PLANE</span><h3>Networking &amp;<br>packet processing</h3><p>Implement and validate programmable data-plane behavior: routing lookups, flow offload, traffic policing, and statistics. Build packet-level tests for encrypted traffic, address translation, and network isolation.</p><div class="project-tags"><span>P4/P4+</span><span>C / C++</span><span>Python</span></div></article>
+                <article class="project-card"><span class="card-number">05 / OBSERVABILITY</span><h3>Diagnostics &amp;<br>cluster health</h3><p>Build health checks and telemetry collection in Python and Go. Analyze RDMA queue state, configuration consistency, connectivity, and software versions, with structured reports and monitoring dashboards.</p><div class="project-tags"><span>Go / Python</span><span>Prometheus</span><span>Grafana</span></div></article>
+                <article class="project-card"><span class="card-number">06 / RELIABILITY</span><h3>Test infrastructure &amp;<br>release engineering</h3><p>Develop unit, protocol, and end-to-end regression coverage. Improve mock fidelity, negative testing, and CI failure detection; maintain containerized builds, Linux packages, and binary-hardening checks.</p><div class="project-tags"><span>CI/CD</span><span>Docker</span><span>Test automation</span></div></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section section-alt" id="contributions">
-        <div class="container">
-            <h2 class="section-title">Open Source Contributions</h2>
-            <div class="contributions-grid">
-                <div class="contribution-card">
-                    <div class="contribution-org">
-                        <span class="contribution-badge">Merged PR</span>
-                    </div>
-                    <h3>rust-lang/rust</h3>
-                    <p>PR #131117 — Updated bootstrap configure.py helper docs to clarify enable/disable options. Merged by bors. Fixed issue #129146.</p>
-                    <a href="https://github.com/rust-lang/rust/pull/131117" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
-                </div>
-                <div class="contribution-card">
-                    <div class="contribution-org">
-                        <span class="contribution-badge">Merged PR</span>
-                    </div>
-                    <h3>invoice-x/invoice2data</h3>
-                    <p>PR #90 — Added Flipkart invoice parsing template to the invoice2data extraction tool. Tested against real invoices.</p>
-                    <a href="https://github.com/invoice-x/invoice2data/pull/90" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
-                </div>
-                <div class="contribution-card">
-                    <div class="contribution-org">
-                        <span class="contribution-badge">Multiple PRs</span>
-                    </div>
-                    <h3>lnmiitPhoenix/Computer-Vision</h3>
-                    <p>5 merged PRs — Added object tracking, face detection, improved project structure, and updated working folders for the Phoenix CV lab.</p>
-                    <a href="https://github.com/lnmiitPhoenix/Computer-Vision" target="_blank" rel="noopener noreferrer" class="contribution-link">View Repo →</a>
-                </div>
-                <div class="contribution-card">
-                    <div class="contribution-org">
-                        <span class="contribution-badge">Team Member</span>
-                    </div>
-                    <h3>Team SAAHASi — SIH 2020</h3>
-                    <p>Smart India Hackathon 2020 Finals (IC465). Built and deployed the team's solution for a national-level problem statement.</p>
-                    <a href="https://github.com/arnabsinha99/IC465_SAAHASi" target="_blank" rel="noopener noreferrer" class="contribution-link">IC465_SAAHASi →</a>
-                </div>
-                <div class="contribution-card">
-                    <div class="contribution-org">
-                        <span class="contribution-badge">Merged PR</span>
-                    </div>
-                    <h3>mrhagrawal/competitive_programming_resources</h3>
-                    <p>PR #25 — Added C++ solutions and corrected README spelling during Hacktoberfest 2020.</p>
-                    <a href="https://github.com/mrhagrawal/competitive_programming_resources/pull/25" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
-                </div>
-                <div class="contribution-card">
-                    <div class="contribution-org">
-                        <span class="contribution-badge">Contributor</span>
-                    </div>
-                    <h3>EbookFoundation &amp; Microsoft</h3>
-                    <p>Submitted PRs to free-programming-books (adding algorithm textbook) and Microsoft/MS-DOS (Hindi README translation).</p>
-                    <a href="https://github.com/EbookFoundation/free-programming-books/pull/4915" target="_blank" rel="noopener noreferrer" class="contribution-link">View PR →</a>
-                </div>
+        <section class="section" id="skills">
+            <div class="section-heading"><p class="eyebrow">03 / Toolkit</p><h2>The right tools.<br>At the right layer.</h2></div>
+            <div class="skills-grid">
+                <div class="skill-category"><h3>Languages &amp; systems</h3><div class="skill-tags"><span>C</span><span>C++</span><span>Go</span><span>Python</span><span>Bash</span><span>P4/P4+</span><span>Linux kernel</span><span>Netlink</span><span>POSIX</span><span>Concurrency</span></div></div>
+                <div class="skill-category"><h3>Build, test &amp; operations</h3><div class="skill-tags"><span>Zephyr RTOS</span><span>QEMU</span><span>Ansible</span><span>Docker</span><span>CMake / Make</span><span>GoogleTest</span><span>Ztest / Twister</span><span>Scapy</span><span>DEB / RPM / DKMS</span><span>Git</span></div></div>
+                <div class="skill-category"><h3>Networks &amp; diagnostics</h3><div class="skill-tags"><span>GPU networking</span><span>RDMA diagnostics</span><span>IPsec</span><span>NAT / routing</span><span>VXLAN / VLAN / VRF</span><span>Prometheus</span><span>Grafana</span><span>Build hardening</span><span>OpenCV</span></div></div>
             </div>
-            <div class="github-graph">
-                <img src="https://ghchart.rshah.org/22c55e/AvatarSenju" alt="GitHub Contributions Graph" loading="lazy">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section" id="journey">
-        <div class="container">
-            <h2 class="section-title">Journey</h2>
+        <section class="section" id="journey">
+            <div class="section-heading"><p class="eyebrow">04 / Journey</p><h2>Built one layer<br>at a time.</h2></div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2025–Present</span>
-                        <h3>AI Networking &amp; GPU Fabric (AMD)</h3>
-                        <p>Building infrastructure automation for GPU-scale AI networking fabrics — Ansible playbooks, switch configuration management, GPU driver verification, and end-to-end IFoE (InfiniBand over Ethernet) bring-up tooling.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024–2025</span>
-                        <h3>Firmware, RTOS &amp; Diagnostics (AMD)</h3>
-                        <p>Developed Zephyr RTOS simulation environments, AINIC health-checker and diagnostic tools, cluster monitoring with Prometheus, and RDMA queue-state analysis. Built CI/CD pipelines for firmware packaging.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023–2024</span>
-                        <h3>DPU Platform &amp; Data-Plane (AMD/Pensando)</h3>
-                        <p>Worked on SmartNIC platform firmware — P4/P4+ data-plane pipelines, IPSec encryption/decryption, flow offload, policers, LPM routing, and DOL (Data-plane Offload Language) test frameworks across multiple ASIC generations.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2022–2023</span>
-                        <h3>Network Test Automation (AMD/Pensando)</h3>
-                        <p>Built end-to-end test automation in Go for DSS (Distributed Services Switch) — VxLAN, VSX, PVLAN, QoS, VRF, and BGP testcases. Managed testbed infrastructure, IOTA framework, and N3K switch configuration.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024</span>
-                        <h3>Rust Compiler Contribution</h3>
-                        <p>Merged PR to rust-lang/rust — improved bootstrap toolchain documentation.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2020</span>
-                        <h3>SIH Finals &amp; Hacktoberfest</h3>
-                        <p>Reached Smart India Hackathon 2020 Finals as Team SAAHASi. Active Hacktoberfest contributor.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2017–2019</span>
-                        <h3>Open Source &amp; University</h3>
-                        <p>Computer vision and robotics at LNMIIT Phoenix lab. First open source contributions — FOSSASIA, invoice2data, Hacktoberfest. Built RoboSoccer autonomous system.</p>
-                    </div>
-                </div>
+                <article class="timeline-item"><span class="timeline-date">2026 — Present</span><div class="timeline-content"><h3>GPU networking &amp; systems integration</h3><p>Linux drivers, userspace APIs, control-plane services, and fabric-management tooling. Infrastructure automation and regression coverage, with attention to asynchronous operations, concurrency, and hardware-compatible behavior.</p></div></article>
+                <article class="timeline-item"><span class="timeline-date">2024 — 2025</span><div class="timeline-content"><h3>Embedded platforms &amp; observability</h3><p>RTOS simulation, firmware build and installation workflows, cluster health-checking tools, and monitoring pipelines. RDMA diagnostics, structured output, and automated validation.</p></div></article>
+                <article class="timeline-item"><span class="timeline-date">2022 — 2024</span><div class="timeline-content"><h3>Programmable networking &amp; data planes</h3><p>Packet-processing pipelines and test infrastructure covering routing, flow offload, policing, IPsec, NAT, and statistics. Simulation, build integration, and release maintenance.</p></div></article>
+                <article class="timeline-item"><span class="timeline-date">2021 — 2023</span><div class="timeline-content"><h3>Network test automation</h3><p>Go-based integration tests for overlay networking, segmentation, redundancy, and traffic behavior. Testbed configuration, failure diagnostics, reboot coverage, and CI workflows.</p></div></article>
+                <article class="timeline-item"><span class="timeline-date">2017 — Present</span><div class="timeline-content"><h3>Open source &amp; continued learning</h3><p>Scoped code and developer-documentation contributions, alongside Python tooling, computer vision, robotics, and algorithms. Smart India Hackathon 2020 finalist.</p></div></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-text">
-                    I'm always open to discussing new opportunities, interesting projects, or just having a conversation about tech.
-                    Feel free to reach out!
-                </p>
-                <div class="contact-links">
-                    <a href="https://github.com/AvatarSenju" class="contact-card" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="mailto:anushrut5@gmail.com" class="contact-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/anushrut/" class="contact-card" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        <span>LinkedIn</span>
-                    </a>
-                </div>
+        <section class="section contact-section" id="contact">
+            <p class="eyebrow">05 / Get in touch</p>
+            <h2>Good systems start<br>with a conversation<span>.</span></h2>
+            <p>Let’s talk systems engineering, networking, or an interesting problem worth solving.</p>
+            <div class="contact-links">
+                <a href="mailto:anushrut5@gmail.com" class="btn btn-primary">Say hello <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/AvatarSenju" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/anushrut/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
             </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Built with ❤️ by Anushrut &copy; 2026</p>
-        </div>
-    </footer>
-
+        </section>
+    </main>
+    <footer class="footer"><a href="#hero" class="nav-logo">Anushrut<span>.</span></a><p>&copy; 2026 Anushrut</p><a href="#hero">Back to top ↑</a></footer>
     <script src="script.js"></script>
 </body>
 </html>
