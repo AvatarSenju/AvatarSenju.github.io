@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0b1120">
-    <meta name="description" content="Anushrut — Software Engineer at AMD. Systems programming, Linux drivers, networking firmware, GPU infrastructure, diagnostics, and automation.">
+    <meta name="description" content="Anushrut — Software Engineer at AMD. Systems programming, Linux drivers, networking firmware, GPU infrastructure, and personal work in AI developer tools.">
     <title>Anushrut | Systems &amp; Networking Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +70,7 @@
                 <div class="about-text">
                     <p>I’m a Software Engineer at <strong>AMD</strong>, working across <strong>networking firmware, Linux device drivers, and userspace systems</strong>. I connect platform behavior with the tools engineers use to configure, validate, and troubleshoot it.</p>
                     <p>My work spans programmable packet processing, embedded RTOS simulation, kernel-to-userspace APIs, and GPU networking infrastructure. I also build diagnostics, monitoring pipelines, and reproducible deployment and test workflows.</p>
+                    <p>In personal projects, I bring that systems mindset to <strong>AI orchestration and developer tools</strong>: Python backends, persistent task workflows, and browser interfaces that keep a person in the loop.</p>
                     <p>My kind of rabbit hole? Following a surprising behavior across the stack until it makes sense. The satisfying part is turning that “why?” into a fix, and a test that catches it next time.</p>
                 </div>
                 <div class="principles">
@@ -89,17 +90,23 @@
             <div class="projects-grid">
                 <article class="project-card"><span class="card-number">01 / SYSTEMS</span><h3>Linux drivers &amp;<br>userspace integration</h3><p>Extend device configuration and telemetry across kernel interfaces, C libraries, and C++ command-line tools. Work with Netlink, asynchronous completion, API compatibility, caching, and device lifecycles.</p><div class="project-tags"><span>C / C++</span><span>Linux</span><span>Netlink</span></div></article>
                 <article class="project-card"><span class="card-number">02 / INFRASTRUCTURE</span><h3>GPU networking &amp;<br>platform automation</h3><p>Build configuration-driven workflows for compute nodes, GPUs, and switches. Automate discovery, driver deployment, configuration, verification, and teardown across hardware and simulated environments.</p><div class="project-tags"><span>Ansible</span><span>Python</span><span>Networking</span></div></article>
-                <article class="project-card"><span class="card-number">03 / EMBEDDED</span><h3>Firmware &amp;<br>RTOS simulation</h3><p>Develop host-based firmware simulation and integrate platform services with hardware models. Maintain build configuration, device-tree generation, packaging, and automated tests for embedded environments.</p><div class="project-tags"><span>Zephyr</span><span>CMake</span><span>QEMU</span></div></article>
+                <article class="project-card"><span class="card-number">03 / EMBEDDED</span><h3>Firmware &amp;<br>RTOS simulation</h3><p>Develop firmware command handling, telemetry transfer, and typed interfaces, alongside host-based simulation. Maintain build configuration, device-tree generation, packaging, and automated tests for embedded environments.</p><div class="project-tags"><span>Zephyr</span><span>CMake</span><span>QEMU</span></div></article>
                 <article class="project-card"><span class="card-number">04 / DATA PLANE</span><h3>Networking &amp;<br>packet processing</h3><p>Implement and validate programmable data-plane behavior: routing lookups, flow offload, traffic policing, and statistics. Build packet-level tests for encrypted traffic, address translation, and network isolation.</p><div class="project-tags"><span>P4/P4+</span><span>C / C++</span><span>Python</span></div></article>
                 <article class="project-card"><span class="card-number">05 / OBSERVABILITY</span><h3>Diagnostics &amp;<br>cluster health</h3><p>Build health checks and telemetry collection in Python and Go. Analyze RDMA queue state, configuration consistency, connectivity, and software versions, with structured reports and monitoring dashboards.</p><div class="project-tags"><span>Go / Python</span><span>Prometheus</span><span>Grafana</span></div></article>
                 <article class="project-card"><span class="card-number">06 / RELIABILITY</span><h3>Test infrastructure &amp;<br>release engineering</h3><p>Develop unit, protocol, and end-to-end regression coverage. Improve mock fidelity, negative testing, and CI failure detection; maintain containerized builds, Linux packages, and binary-hardening checks.</p><div class="project-tags"><span>CI/CD</span><span>Docker</span><span>Test automation</span></div></article>
+                <article class="project-card project-card-wide">
+                    <span class="card-number">07 / PERSONAL PROJECTS</span>
+                    <h3>AI orchestration &amp; developer tools</h3>
+                    <p>Build tools that coordinate AI-assisted work across hosts, track tasks and sessions, and put approvals in human hands. Connect Python web backends and SQLite state with JavaScript interfaces, remote execution, and regression tests for lifecycle and failure handling.</p>
+                    <div class="project-tags"><span>Python / Starlette</span><span>SQLite</span><span>JavaScript / HTML / CSS</span><span>SSH / tmux</span></div>
+                </article>
             </div>
         </section>
 
         <section class="section" id="skills">
             <div class="section-heading"><p class="eyebrow">03 / Toolkit</p><h2>What’s in<br>the toolbox?</h2></div>
             <div class="skills-grid">
-                <div class="skill-category"><h3>Languages &amp; systems</h3><div class="skill-tags"><span>C</span><span>C++</span><span>Go</span><span>Python</span><span>Bash</span><span>P4/P4+</span><span>Linux kernel</span><span>Netlink</span><span>POSIX</span><span>Concurrency</span></div></div>
+                <div class="skill-category"><h3>Languages &amp; systems</h3><div class="skill-tags"><span>C</span><span>C++</span><span>Go</span><span>Python</span><span>JavaScript</span><span>Bash</span><span>P4/P4+</span><span>Linux kernel</span><span>Netlink</span><span>POSIX</span><span>Concurrency</span></div></div>
                 <div class="skill-category"><h3>Build, test &amp; operations</h3><div class="skill-tags"><span>Zephyr RTOS</span><span>QEMU</span><span>Ansible</span><span>Docker</span><span>CMake / Make</span><span>GoogleTest</span><span>Ztest / Twister</span><span>Scapy</span><span>DEB / RPM / DKMS</span><span>Git</span></div></div>
                 <div class="skill-category"><h3>Networks &amp; diagnostics</h3><div class="skill-tags"><span>GPU networking</span><span>RDMA diagnostics</span><span>IPsec</span><span>NAT / routing</span><span>VXLAN / VLAN / VRF</span><span>Prometheus</span><span>Grafana</span><span>Build hardening</span><span>OpenCV</span></div></div>
             </div>
@@ -108,11 +115,12 @@
         <section class="section" id="journey">
             <div class="section-heading"><p class="eyebrow">04 / Journey</p><h2>Built one layer<br>at a time.</h2></div>
             <div class="timeline">
+                <article class="timeline-item"><span class="timeline-date">2026 · Personal work</span><div class="timeline-content"><h3>AI tooling, from backend to browser</h3><p>Build human-in-the-loop developer workflows with multi-host task routing, persistent sessions, approval controls, and web interfaces. Apply regression testing to orchestration, remote execution, and state transitions.</p></div></article>
                 <article class="timeline-item"><span class="timeline-date">2026 — Present</span><div class="timeline-content"><h3>GPU networking &amp; systems integration</h3><p>Linux drivers, userspace APIs, control-plane services, and fabric-management tooling. Infrastructure automation and regression coverage, with attention to asynchronous operations, concurrency, and hardware-compatible behavior.</p></div></article>
                 <article class="timeline-item"><span class="timeline-date">2024 — 2025</span><div class="timeline-content"><h3>Embedded platforms &amp; observability</h3><p>RTOS simulation, firmware build and installation workflows, cluster health-checking tools, and monitoring pipelines. RDMA diagnostics, structured output, and automated validation.</p></div></article>
                 <article class="timeline-item"><span class="timeline-date">2022 — 2024</span><div class="timeline-content"><h3>Programmable networking &amp; data planes</h3><p>Packet-processing pipelines and test infrastructure covering routing, flow offload, policing, IPsec, NAT, and statistics. Simulation, build integration, and release maintenance.</p></div></article>
                 <article class="timeline-item"><span class="timeline-date">2021 — 2023</span><div class="timeline-content"><h3>Network test automation</h3><p>Go-based integration tests for overlay networking, segmentation, redundancy, and traffic behavior. Testbed configuration, failure diagnostics, reboot coverage, and CI workflows.</p></div></article>
-                <article class="timeline-item"><span class="timeline-date">2017 — Present</span><div class="timeline-content"><h3>Open source &amp; continued learning</h3><p>Scoped code and developer-documentation contributions, alongside Python tooling, computer vision, robotics, and algorithms. Smart India Hackathon 2020 finalist.</p></div></article>
+                <article class="timeline-item"><span class="timeline-date">2017 — Present</span><div class="timeline-content"><h3>Open source &amp; continued learning</h3><p>Scoped code and developer-documentation contributions, alongside Python tooling, web applications, image-classification APIs, computer vision, robotics, speech-recognition experiments, and algorithms. Smart India Hackathon 2020 finalist.</p></div></article>
             </div>
         </section>
 
