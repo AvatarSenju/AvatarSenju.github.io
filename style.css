@@ -230,8 +230,9 @@ h1 > span {
 }
 
 .hero-stats {
-    display: flex;
-    gap: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
     margin-top: 46px;
     padding-top: 28px;
     border-top: 1px solid var(--border);
@@ -243,7 +244,7 @@ h1 > span {
 }
 
 .stat-number {
-    font-size: 1.6rem;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
     font-weight: 600;
     letter-spacing: -0.04em;
 }
@@ -786,14 +787,6 @@ h2 {
 @media (max-width: 480px) {
     .projects-grid {
         grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-stats {
-        gap: 24px;
-    }
-
-    .stat-number {
-        font-size: 1.4rem;
     }
 
     .stat-label {
