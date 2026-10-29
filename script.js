@@ -52,3 +52,44 @@ function updateNavigation() {
 window.addEventListener('scroll', updateNavigation, { passive: true });
 window.addEventListener('load', updateNavigation);
 updateNavigation();
+
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const revealedElements = new WeakSet();
+const activeReveals = new Set();
+let revealObserver;
+
+function configureReveals() {
+    revealObserver?.disconnect();
+    activeReveals.forEach(animation => animation.cancel());
+    activeReveals.clear();
+
+    if (motionPreference.matches || typeof window.IntersectionObserver !== 'function' || !Element.prototype.animate) {
+        return;
+    }
+
+    revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            revealObserver.unobserve(entry.target);
+            revealedElements.add(entry.target);
+            const animation = entry.target.animate([
+                { opacity: 0.8, translate: '0 12px' },
+                { opacity: 1, translate: '0 0' }
+            ], { duration: 450, easing: 'ease-out' });
+            activeReveals.add(animation);
+            animation.onfinish = animation.oncancel = () => activeReveals.delete(animation);
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-heading, .project-card, .ai-workflow, .skill-category, .timeline-item').forEach(element => {
+        if (!revealedElements.has(element)) {
+            revealObserver.observe(element);
+        }
+    });
+}
+
+motionPreference.addEventListener('change', configureReveals);
+configureReveals();

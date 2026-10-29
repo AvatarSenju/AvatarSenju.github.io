@@ -111,6 +111,7 @@ summary:focus-visible {
 }
 
 .nav-links a {
+    position: relative;
     display: block;
     padding-block: 10px;
     font-size: 0.85rem;
@@ -120,6 +121,23 @@ summary:focus-visible {
 .nav-links a:hover,
 .nav-links a[aria-current="location"] {
     color: var(--accent);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 4px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a[aria-current="location"]::after {
+    transform: scaleX(1);
 }
 
 .nav-toggle {
@@ -338,6 +356,12 @@ h1 > span {
     border-radius: 7px;
     padding: 14px;
     column-gap: 10px;
+    transition: border-color 180ms ease, background 180ms ease;
+}
+
+.stack-layer:hover {
+    border-color: #4d8479;
+    background: #142638;
 }
 
 .stack-layer > span {
@@ -802,6 +826,28 @@ h2 {
     }
 }
 
+@keyframes settle-in {
+    from {
+        opacity: 0.8;
+        translate: 0 12px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hero-content {
+        animation: settle-in 550ms ease-out;
+    }
+
+    .hero-visual {
+        animation: settle-in 650ms ease-out;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -810,6 +856,7 @@ h2 {
     *,
     *::before,
     *::after {
+        animation: none !important;
         transition: none !important;
     }
 }
